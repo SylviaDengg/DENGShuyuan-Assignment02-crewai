@@ -1,0 +1,59 @@
+[
+  {
+    "id": "refreshed_2",
+    "record": {
+      "url": "https://www.npr.org",
+      "title": "NPR - Breaking News, Analysis, Music, Arts &amp; Podcasts : NPR",
+      "byline": "",
+      "text": "A \"VOTE\" sign is posted near a polling center on Tuesday in Austin, Texas. Texas held their primary elections including two hotly contested races for Democratic and Republican Senate nominations. Brandon Bell/Getty Images hide caption A \"VOTE\" sign is posted near a polling center on Tuesday in Austi"
+    },
+    "expectations": {
+      "score_min": 0,
+      "score_max": 100,
+      "label_one_of": [
+        "higher_credibility",
+        "mixed_credibility",
+        "lower_credibility"
+      ],
+      "should_error": false
+    }
+  },
+  {
+    "id": "refreshed_3",
+    "record": {
+      "url": "https://www.cdc.gov",
+      "title": "Centers for Disease Control and Prevention | CDC",
+      "byline": "CDC",
+      "text": "A .gov website belongs to an official government organization in the United States. A lock ( ) or https:// means you've safely connected to the .gov website. Share sensitive information only on official, secure websites."
+    },
+    "expectations": {
+      "score_min": 0,
+      "score_max": 100,
+      "label_one_of": [
+        "higher_credibility",
+        "mixed_credibility",
+        "lower_credibility"
+      ],
+      "should_error": false
+    }
+  },
+  {
+    "id": "refreshed_4",
+    "record": {
+      "url": "https://www.bbc.com",
+      "title": "BBC Home - Breaking News, World News, US News, Sports, Business, Innovation, Climate, Culture, Travel, Video &amp; Audio",
+      "byline": "",
+      "text": "British Broadcasting Corporation Home News Sport Business Technology Health Culture Arts Travel Earth Audio Video Live Home News US &amp; Canada UK UK Politics England N. Ireland N. Ireland Politics Scotland Scotland Politics Wales Wales Politics Africa Asia China India Australia Europe Latin Americ"
+    },
+    "expectations": {
+      "score_min": 0,
+      "score_max": 100,
+      "label_one_of": [
+        "higher_credibility",
+        "mixed_credibility",
+        "lower_credibility"
+      ],
+      "should_error": false
+    }
+  }
+]
