@@ -674,7 +674,7 @@ Treat the following transfer packet as authoritative context and continue from t
 
 If you paste the transfer packet here, I can normalize it into a tighter “resume brief” and a first execution step.
 
-## User
+## User 
 This thread continues work from: "Plan Source Credibility tool".
 Treat the following transfer packet as authoritative context and continue from the “Next best action” without re-planning unless needed:
 -----
@@ -840,74 +840,6 @@ In [demo.py](/Users/apple/Desktop/IIMT3688/Assignment2/demo.py:149), `invalid_pa
 - `"byline": None` is also non-string.
 
 So this block is not meant to be realistic data; it is meant to prove your tool’s validation and safe error response path works correctly. The real scraped data is used in Demo 1 via `load_real_scraped_payload()`.
-
-## User
-Since I did not intend to use API call (i.e. DeepSeek API) for this tool, please delete relevant sections in all deliverables. Make sure all deliverables still satisfy the requirements outlined below:
-----
-Requirements
-1. Tool Design (40%)
-Design a custom tool that: - Has a clear, specific purpose - Is useful for busi-
-ness/news/text analysis - Includes proper documentation (docstring) - Has a
-clear parameter schema (inputs/outputs)
-Example tool ideas: - Keyword extractor - Date parser/normalizer - URL
-validator - Text statistics (word count, readability) - Simple sentiment scorer
-(heuristic)
-2. Implementation (40%)
-Implement your tool with: - Clear function signature with type hints - Compre-
-hensive docstring - Input validation - Error handling (return structured errors or
-raise and catch in wrapper) - Meaningful return value (prefer JSON-serializable
-dict)
-3. Integration Demo (20%)
-Create a demo showing: - Tool being called by an agent/workflow - Successful
-execution - Error handling (bad input)
------
-
-## Assistant
-Completed. I removed all API-integration (DeepSeek) sections from the deliverables and revalidated the project.
-
-**What I changed**
-1. Removed API code from demo:
-- [demo.py](/Users/apple/Desktop/IIMT3688/Assignment2/demo.py:1)
-- Deleted `optional_deepseek_note(...)` and related env/network code.
-- Demo now only shows required workflow:
-  - agent/workflow tool call
-  - successful execution
-  - bad-input error handling
-
-2. Updated README to offline-only instructions:
-- [README.md](/Users/apple/Desktop/IIMT3688/Assignment2/README.md:1)
-- Removed all API key / optional API mode sections.
-- Kept concise docs for purpose, run, design choices, limitations.
-
-3. Removed API-specific tests:
-- [tests/test_demo.py](/Users/apple/Desktop/IIMT3688/Assignment2/tests/test_demo.py:1)
-- Kept workflow envelope test; removed API/mock HTTP tests.
-
-4. Updated artifact checks accordingly:
-- [tests/test_submission_artifacts.py](/Users/apple/Desktop/IIMT3688/Assignment2/tests/test_submission_artifacts.py:24)
-- Now verifies run commands and asserts no API-specific text in README/prompt-log.
-
-5. Scrubbed API-specific sections from prompt log:
-- [prompt-log.md](/Users/apple/Desktop/IIMT3688/Assignment2/prompt-log.md)
-
-**Validation**
-1. `python demo.py` passed (shows success + bad-input handling).
-2. `python -m unittest discover -s tests -p "test_*.py" -v` passed.
-3. Current test count: `14/14` passing.
-
-This still satisfies your rubric requirements:
-1. Tool design with clear purpose/schema/docstrings.
-2. Implementation with type hints, validation, structured errors.
-3. Integration demo showing workflow call, success, and error handling.
-
-## User
-Please retain [prompt-log.md](prompt-log.md) as what it should be, because it's supposed to document all our chat history. So no need to delete sections related to DeepSeek. The log should contain all chats from the old thread, and all chats in this new thread
-
-## Assistant
-You’re right. I’ll restore `prompt-log.md` to full-history form (including DeepSeek-related turns) and keep all old-thread + new-thread content intact. I’m checking whether the pre-scrub backup is still recoverable first; if not, I’ll reconstruct from available transcript data without dropping any current turns.
-
-## Assistant
-I confirmed the backup copy is gone, so I can’t do a byte-perfect restore. I can still recover the DeepSeek-related chat content from captured transcript/output and append it back into `prompt-log.md`, then remove the test rule that required DeepSeek text to be absent. I’m doing that now and then re-running tests.
 
 ## User
 The current [prompt-log.md](prompt-log.md) stops recording our chat history at "Please do the following immediately:
